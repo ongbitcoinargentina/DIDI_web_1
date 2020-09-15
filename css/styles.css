@@ -1,0 +1,477 @@
+@charset "CP850";
+/*
+
+
+*/
+/*------------------------------------*\
+    RESET
+\*------------------------------------*/
+/* CSS reset */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset, img {
+  border: 0; }
+
+input {
+  border: 1px solid #b0b0b0;
+  padding: 3px 5px 4px;
+  color: #979797;
+  width: 190px; }
+
+address, caption, cite, code, dfn, th, var {
+  font-style: normal;
+  font-weight: normal; }
+
+ol, ul {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: 0; }
+
+/*------------------------------------*\
+    FONTS - CROSS
+\*------------------------------------*/
+@font-face {
+  font-family: 'brandon_grotesquebold';
+  src: url("../fonts/brandon_bld.eot");
+  src: url("../fonts/brandon_bld.eot?#iefix") format("embedded-opentype"), url("../fonts/brandon_bld.woff2") format("woff2"), url("../fonts/brandon_bld.woff") format("woff"), url("../fonts/brandon_bld.ttf") format("truetype"), url("../fonts/brandon_bld.svg#brandon_grotesquebold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'brandon_grotesquemedium';
+  src: url("../fonts/brandon_med.eot");
+  src: url("../fonts/brandon_med.eot?#iefix") format("embedded-opentype"), url("../fonts/brandon_med.woff2") format("woff2"), url("../fonts/brandon_med.woff") format("woff"), url("../fonts/brandon_med.ttf") format("truetype"), url("../fonts/brandon_med.svg#brandon_grotesquemedium") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/*------------------------------------*\
+    GENERAL - CROSS
+\*------------------------------------*/
+* {
+  box-sizing: border-box; }
+
+html,
+body {
+  overflow-x: hidden;
+  color: white;
+  background-color: #76b4f1; }
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 19px; }
+
+h2 {
+  font-family: 'brandon_grotesquemedium', sans-serif;
+  font-size: 24px; }
+
+/*------------------------------------*\
+    LANDING
+\*------------------------------------*/
+.landing {
+  display: table;
+  height: 100vh;
+  margin: auto;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+  width: 600px; 
+  margin-top: -40px; }
+  .lat {
+    display: table-cell;
+    vertical-align: top;
+    position: relative; }
+    .logo {
+      background: transparent url(../img/logo.png) no-repeat;
+      /* width: 411px;  */
+      height: 411px;
+      margin-bottom: 15px;
+      opacity: 0;
+      -webkit-transform: scale(0);
+      transform: scale(0);
+      -webkit-animation: scale 2s forwards, fadeIn 2s forwards;
+      animation: scale 2s forwards, fadeIn 2s forwards; }
+     h1,
+     h2,
+        .companyLogo {
+          opacity: 0;
+          -webkit-animation: fadeIn 2s 1s forwards;
+          animation: fadeIn 2s 1s forwards; }
+         .companyLogo {
+          -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s; }
+        .companyLogo {
+          display: block;
+          width: 205px;
+          height: 100px;
+          /* margin: 0px auto 0; */
+          transition: transform 0.3s; }
+
+          .companyLogo:hover {
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1); }
+
+            .allCompaniesLogo {
+              opacity: 0;
+              -webkit-animation: fadeIn 2s 1s forwards;
+              animation: fadeIn 2s 1s forwards; }
+             .allCompaniesLogo {
+              -webkit-animation-delay: 1.5s;
+              animation-delay: 1.5s; }
+            .allCompaniesLogo {
+              background: transparent url(../img/logo-todos-los-partners-mobile.png) no-repeat;
+              background-position:center;
+              display: block;
+              width: 411px;
+              height: 200px;
+              margin: 0px auto 0;
+              margin-bottom: 30px;
+              transition: transform 0.3s; }
+
+              #logo_ong {
+                background: transparent url(../img/1_ONG.png) no-repeat; 
+                background-position:right; 
+              }
+
+              #logo_bid {
+                background: transparent url(../img/2_BID.png) no-repeat; 
+                background-position:left;
+              }
+
+              #logo_nec {
+                background: transparent url(../img/3_NEC.png) no-repeat; 
+                width: 100%;
+                background-position:center;
+              }
+
+              #logo_rsk {
+                background: transparent url(../img/4_RSK.png) no-repeat; 
+                background-position:center;
+              }
+
+              #logo_accenture {
+                background: transparent url(../img/5_ACCENTURE.png) no-repeat; 
+                background-position:center;
+              }
+
+              #logo_ong_column {
+                display: none;
+              }
+        
+              #logo_bid_column {
+                display: none;
+              }
+        
+              #logo_nec_column {
+                display: none;
+              }
+        
+              #logo_rsk_column {
+                display: none;
+              }
+        
+              #logo_accenture_column {
+                display: none;
+              }
+
+@-webkit-keyframes scale {
+  to {
+    -webkit-transform: scale(1); } }
+@keyframes scale {
+  to {
+    transform: scale(1); } }
+@-webkit-keyframes fadeIn {
+  to {
+    opacity: 1; } }
+@keyframes fadeIn {
+  to {
+    opacity: 1; } }
+@media screen and (max-height: 900px) {
+  .landing .lat {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9); } }
+
+@media screen and (max-width: 370px) {
+
+  @keyframes scale {
+    to {
+      transform: scale(0.6); } }
+
+  .landing .lat h1 {
+    font-size: 16px; }
+  .landing .lat h2 {
+    font-size: 16px; }
+  .landing .lat a {
+    margin-top: 10px; } 
+
+      .landing  {
+      width: 100%; 
+    } 
+
+      .grid-container-triple {
+        margin-top: -30px;
+      }
+
+      .grid-item-doble {
+        display: none;
+      }
+      .grid-item-triple {
+        display: none;
+      }
+
+      #logo_ong_column {
+        display: block;
+      }
+
+      #logo_bid_column {
+        display: block;
+      }
+
+      #logo_nec_column {
+        display: block;
+      }
+
+      #logo_rsk_column {
+        display: block;
+      }
+
+      #logo_accenture_column {
+        display: block;
+      }
+
+      .logo {
+        margin-bottom: -60px;
+        margin-top: -50px;
+        width: 100%; 
+
+      }
+
+      .lat {
+        width: 411px; 
+        display: block;
+        margin-left: -25px;
+
+      }
+
+  }
+
+
+    @media screen and (min-width: 371px) and (max-width: 570px) {
+      @-webkit-keyframes scale {
+        to {
+          -webkit-transform: scale(0.9); } }
+      @keyframes scale {
+        to {
+          transform: scale(0.9); } }
+         .landing  {
+          width: 100%;  
+          margin-top: -70px;
+        } 
+
+          .landing .lat h1 {
+            font-size: 18px; }
+
+            .logo  {
+              margin-bottom: -35px;  } 
+
+          .lat  {
+            width: 100%;  } 
+
+          .grid-container-doble .companyLogo .grid-item-doble .grid-item-triple .grid-container-triple {
+            width: 100%;
+            -webkit-transform: scale(0.9);
+      transform: scale(0.8);
+          }
+          .grid-item-triple .grid-container-triple {
+            height: 100%;
+
+          }
+
+          .grid-container-triple {
+            margin-top: -30px;
+          }
+
+          
+          #logo_ong {
+            background: transparent url(../img/small-logos/1_ONG-small.png) no-repeat; 
+            background-position:right; 
+          }
+  
+          #logo_bid {
+            background: transparent url(../img/small-logos/2_BID-small.png) no-repeat; 
+            background-position:left; 
+          }
+  
+          #logo_nec {
+            background: transparent url(../img/small-logos/3_NEC-small.png) no-repeat; 
+            background-position:bottom; 
+          }
+  
+          #logo_rsk {
+            background: transparent url(../img/small-logos/4_RSK-small.png) no-repeat; 
+            background-position:bottom; 
+
+          }
+  
+          #logo_accenture {
+            background: transparent url(../img/small-logos/5_ACCENTURE-small.png) no-repeat; 
+            background-position:bottom; 
+
+          } 
+          
+   }
+
+
+
+@media screen and (max-height: 600px) {
+  @-webkit-keyframes scale {
+    to {
+      -webkit-transform: scale(0.6); } }
+  @keyframes scale {
+    to {
+      transform: scale(0.6); } }
+  .landing .lat .logo .companyLogo  {
+    margin: -90px 0 -60px; }
+
+  .landing .lat a {
+    margin-top: 10px; } }
+
+/*------------------------------------*\
+    SLIDER
+\*------------------------------------*/
+.background_slider {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 0; }
+  .background_slider li {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-animation: imageAnimation 24s linear infinite 0s;
+    animation: imageAnimation 24s linear infinite 0s; }
+    .background_slider li:nth-child(1) {
+      background-image: url(../img/01_background_1920x1080.jpg); }
+    .background_slider li:nth-child(2) {
+      background-image: url(../img/02_background_1920x1080.jpg);
+      -webkit-animation-delay: 6s;
+      animation-delay: 6s; }
+    .background_slider li:nth-child(3) {
+      background-image: url(../img/03_background_1920x1080_2.jpg);
+      -webkit-animation-delay: 12s;
+      animation-delay: 12s; }
+    .background_slider li:nth-child(4) {
+      background-image: url(../img/01_background_1920x1080.jpg);
+      -webkit-animation-delay: 18s;
+      animation-delay: 18s; }
+
+@-webkit-keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    -webkit-animation-timing-function: ease-in; }
+
+  8% {
+    opacity: 1;
+    -webkit-animation-timing-function: ease-out; }
+
+  17% {
+    opacity: 1; }
+
+  30% {
+    opacity: 0; }
+
+  100% {
+    opacity: 0; } }
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in; }
+
+  8% {
+    opacity: 1;
+    animation-timing-function: ease-out; }
+
+  17% {
+    opacity: 1; }
+
+  30% {
+    opacity: 0; }
+
+  100% {
+    opacity: 0; } }
+@media screen and (max-width: 1366px) {
+  .background_slider li:nth-child(1) {
+    background-image: url(../img/01_background_1920x1080.jpg); }
+  .background_slider li:nth-child(2) {
+    background-image: url(../img/02_background_1920x1080.jpg); }
+  .background_slider li:nth-child(3) {
+    background-image: url(../img/03_background_1920x1080_2.jpg); }
+  .background_slider li:nth-child(4) {
+    background-image: url(../img/01_background_1920x1080.jpg); } }
+@media screen and (max-width: 800px) {
+  .background_slider li:nth-child(1) {
+    background-image: url(../img/01_background_1920x1080.jpg); }
+  .background_slider li:nth-child(2) {
+    background-image: url(../img/02_background_1920x1080.jpg); }
+  .background_slider li:nth-child(3) {
+    background-image: url(../img/03_background_1920x1080_2.jpg); }
+  .background_slider li:nth-child(4) {
+    background-image: url(../img/01_background_1920x1080.jpg); } }
+
+    .grid-container-simple {
+      display: grid;
+      grid-template-columns: auto ;
+      padding: 10px;
+    }
+    
+    .grid-container-doble {
+      display: grid;
+      grid-template-columns: auto auto;
+      padding: 0px;
+    }
+    .grid-container-triple {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      padding: 10px;
+    }
+    .grid-item-doble {
+      padding: 0px;
+      font-size: 30px;
+      justify-content: center; 
+    }
+
+    .grid-item-triple {
+      padding: 0px;
+      font-size: 30px;
+      justify-content: center; 
+    }
